@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Gru</title>
+    <link rel="icon" href="./img/logo.png">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            background-color: #004dff;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        .logo img {
+            width: 80px;
+            height: 50px;
+        }
+
+        .categories {
+            display: flex;
+            margin-left: 20px;
+        }
+
+        .category {
+            margin: 0 15px;
+            cursor: pointer;
+            color: white;
+        }
+
+        .login-button {
+            margin-left: auto;
+            padding: 10px 20px;
+            background-color: #ff4500;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .login-button:hover {
+            background-color: #e63900;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .about {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+
+        .about div {
+            flex: 1;
+            margin: 0 10px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+        }
+
+        .report-section {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #004dff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #003bb5;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .popover {
+            display: none;
+            position: absolute;
+            background: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="logo">
+            <img src="./img/logo.png" alt="Logo" />
+        </div>
+        <div class="categories">
+            <a href="#" class="category">Início</a>
+            <a href="solicitacoes.html" class="category">Solicitações</a>
+            <a href="#" class="category">Sobre</a>
+            <a href="#" class="category">Conscientização</a>
+    </div>
+        <button class="login-button" id="loginButton">Logar</button>
+    </div>
+
+    <div class="container">
+        <h1>Bem-vindo ao Grid Gru</h1>
+        <p>(Gestão de Resolução e Integração de Dados de Guarulhos)</p>
+
+        <div class="about">
+            <div>
+                <h2>Sobre nós</h2>
+                <p>Somos uma plataforma dedicada com o objetivo de otimizar a gestão de dados.</p>
+            </div>
+            <div>
+                <h2>Como funciona</h2>
+                <p>O sistema adota uma abordagem baseada em dados para melhorar a eficiência e a resolução de problemas.
+                </p>
+            </div>
+        </div>
+
+        <div class="report-section">
+            <h2>Deseja relatar algo?</h2>
+            <button>Relatar</button>
+        </div>
+
+<div class="popover" id="popover">
+    <a href="./login.html"><button>SAR01</button></a><br>
+    <a href="./login.html"><button>SAR02</button></a><br>
+    <a href="./login.html"><button>SAR03</button></a><br>
+    <a href="./login.html"><button>SAR04</button></a><br>
+    <a href="./login.html"><button>SAR05</button></a><br>
+</div>
+    </div>
+
+    <footer>
+        <p>Políticas de privacidade | Termos de Uso</p>
+        <p>Relacionados cada dado com você | Contate Suporte</p>
+    </footer>
+
+    <script>
+        document.getElementById('loginButton').addEventListener('click', function () {
+            const popover = document.getElementById('popover');
+            popover.style.display = popover.style.display === 'block' ? 'none' : 'block';
+        });
+    </script>
+</body>
+
+</html>
