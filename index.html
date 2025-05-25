@@ -15,6 +15,7 @@
 
         .navbar {
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
             background-color: #004dff;
             color: white;
@@ -28,6 +29,7 @@
 
         .categories {
             display: flex;
+            flex-wrap: wrap;
             margin-left: 20px;
         }
 
@@ -67,6 +69,7 @@
 
         .about {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
             margin: 20px 0;
         }
@@ -77,6 +80,7 @@
             padding: 20px;
             background-color: #f9f9f9;
             border-radius: 8px;
+            min-width: 200px;
         }
 
         .report-section {
@@ -110,6 +114,27 @@
             padding: 10px;
             border-radius: 5px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            top: 300px;
+            left: 200px;
+        }
+
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+            }
+
+            .categories {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+
+            .about {
+                flex-direction: column;
+            }
+
+            .about div {
+                margin: 10px 0;
+            }
         }
     </style>
 </head>
@@ -125,7 +150,7 @@
             <a href="solicitacoes.html" class="category">Solicitações</a>
             <a href="#" class="category">Sobre</a>
             <a href="#" class="category">Conscientização</a>
-    </div>
+        </div>
         <button class="login-button" id="loginButton">Logar</button>
     </div>
 
@@ -140,8 +165,7 @@
             </div>
             <div>
                 <h2>Como funciona</h2>
-                <p>O sistema adota uma abordagem baseada em dados para melhorar a eficiência e a resolução de problemas.
-                </p>
+                <p>O sistema adota uma abordagem baseada em dados para melhorar a eficiência e a resolução de problemas.</p>
             </div>
         </div>
 
@@ -150,13 +174,13 @@
             <button>Relatar</button>
         </div>
 
-<div class="popover" id="popover">
-    <a href="./login.html"><button>SAR01</button></a><br>
-    <a href="./login.html"><button>SAR02</button></a><br>
-    <a href="./login.html"><button>SAR03</button></a><br>
-    <a href="./login.html"><button>SAR04</button></a><br>
-    <a href="./login.html"><button>SAR05</button></a><br>
-</div>
+        <div class="popover" id="popover">
+            <a href="./login.html"><button>SAR01</button></a><br>
+            <a href="./login.html"><button>SAR02</button></a><br>
+            <a href="./login.html"><button>SAR03</button></a><br>
+            <a href="./login.html"><button>SAR04</button></a><br>
+            <a href="./login.html"><button>SAR05</button></a><br>
+        </div>
     </div>
 
     <footer>
